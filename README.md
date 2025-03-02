@@ -127,12 +127,6 @@ This project demonstrates the use of computer vision techniques for object detec
 ![Detected Coins](part-1/output_images/detected_coins.jpg)
 *Image with detected coin contours and count displayed.*
 
-![Binary Image](part-1/output_images/binary.jpg)
-*Binary thresholded image.*
-
-![Edges](part-1/output_images/edges.jpg)
-*Image with detected edges.*
-
 ![Segmented Coins](part-1/output_images/segmented_coins.jpg)
 *Image with segmented coins in different colors.*
 
