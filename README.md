@@ -82,12 +82,6 @@ python stitchingv2.py
 - `cv2.drawKeypoints()` – Draws keypoints on images for visualization.
 - `cv2.drawMatches()` – Visualizes matched features between images.
 
-## Output Files
-- `KeypointsImage1.jpg`, `KeypointsImage2.jpg` – Visualized keypoints for input images.
-- `FeatureMatches1.jpg` – Matched features between images.
-- `half_stitched.jpg` – Intermediate stitched image.
-- `panorama_3.jpg` – Final panoramic output.
-
 ## Conclusion
 This implementation successfully detects and matches key features between images to create a seamless panoramic view.
 
