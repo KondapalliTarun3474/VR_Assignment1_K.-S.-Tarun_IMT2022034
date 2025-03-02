@@ -14,90 +14,99 @@ This project consists of two major tasks:
 Both tasks utilize computer vision techniques implemented using OpenCV and related libraries.
 
 ---
+# Part 1: Coin Detection
 
-## Part 1: Coin Detection, Segmentation, and Counting  
+## Requirements
+Before running the script, ensure you have the required dependencies installed:
 
-### Objective  
-Detect, segment, and count coins from an image containing scattered Indian coins using computer vision techniques.
+```bash
+pip install opencv-python
+pip install numpy
+```
 
-### Implementation Steps  
-1. **Preprocessing the Image**  
-   - Convert the image to grayscale.  
-   - Apply Gaussian blur for noise reduction.  
-2. **Edge Detection**  
-   - Use Canny edge detection to find edges of coins.  
-   - Apply dilation to strengthen edges.  
-3. **Contour Detection and Filtering**  
-   - Detect contours in the processed image.  
-   - Filter using circularity and area thresholds to remove false positives.  
-4. **Segmentation and Counting**  
-   - Highlight detected coins with green contours.  
-   - Assign random colors to segmented coins.  
-   - Display and save the final output.  
+## Running the Script
+Run the following command to execute the coin detection script:
 
-### Challenges and Refinements  
-- **Direct Canny Edge Detection** produced incomplete results due to lighting variations.  
-- **Histogram Equalization** increased noise and background artifacts.  
-- **Binary Thresholding** provided the best separation between coins and background.  
-- **Refined Contour Selection** eliminated noise by adjusting circularity and area thresholds.  
+```bash
+python coin_detector.py
+```
 
-### Final Approach  
-- **Preprocessing:** Gaussian blur  
-- **Binary Thresholding:** Better foreground-background separation  
-- **Edge Detection:** Canny method  
-- **Dilation:** Strengthen edges  
-- **Contour Detection & Filtering:** Circularity & area-based selection  
-- **Visualization:** Mark and count detected coins  
+## Functionality
+- Converts the image to grayscale and applies Gaussian blur to reduce noise.
+- Uses binary thresholding to separate coins from the background.
+- Detects edges using Canny edge detection and strengthens them with dilation.
+- Extracts contours using `cv2.findContours()` and filters based on area and circularity.
+- Highlights detected coins and overlays the total count on the image.
 
-### Outcome  
-Successfully detected and counted coins with high accuracy while minimizing noise impact.
+## Key Functions Used
+- `cv2.GaussianBlur()` – Applies Gaussian filter for noise reduction.
+- `cv2.threshold()` – Performs binary thresholding to segment the coins.
+- `cv2.Canny()` – Detects edges in the image.
+- `cv2.dilate()` – Strengthens edges and closes small gaps.
+- `cv2.findContours()` – Identifies contours in the processed image.
+- `cv2.drawContours()` – Highlights detected coins and assigns random colors to segmented regions.
+- `random.randint()` – Generates random colors for segmented coins.
+- `numpy.ones()` – Creates a kernel for morphological operations.
 
 ---
 
-## Part 2: Image Stitching for Panorama Generation  
+# Part 2: Image Stitching
 
-### Objective  
-Stitch three images into a single panorama using feature detection and homography transformation.
+## Requirements
+Ensure you have the required dependencies installed:
 
-### Implementation Steps  
-1. **Keypoint Detection and Feature Extraction**  
-   - Convert images to grayscale.  
-   - Detect key points using SIFT.  
-2. **Feature Matching**  
-   - Use BFMatcher with L2 norm for optimal SIFT feature matching.  
-   - Apply cross-checking to ensure one-to-one matches.  
-3. **Homography Estimation**  
-   - Compute transformation matrix aligning images.  
-   - Map corresponding key points between images.  
-4. **Image Warping and Stitching**  
-   - Warp images using the homography matrix.  
-   - Overlay images to generate a seamless panorama.  
-5. **Final Panorama Generation**  
-   - Stitch image3 (right) to image1 (middle).  
-   - Stitch image2 (left) to the intermediate result.  
-   - Save the final panorama as `panorama_3.jpg`.  
+```bash
+pip install opencv-python
+pip install numpy
+```
 
-### Outcome  
-Successfully created a panoramic image by aligning and blending multiple images using computer vision techniques.
+## Running the Script
+Run the following command to execute the image stitching script:
 
----
+```bash
+python stitchingv2.py
+```
+
+## Functionality
+- Detects keypoints and extracts descriptors using SIFT.
+- Matches features between images using the Brute Force Matcher.
+- Computes the homography matrix to align images.
+- Warps images and overlays them to create a stitched panorama.
+- Saves intermediate images for visualization, including keypoints and matched features.
+
+## Key Functions Used
+- `cv2.SIFT_create()` – Detects keypoints and extracts descriptors.
+- `cv2.BFMatcher()` – Matches features between images.
+- `cv2.findHomography()` – Computes the transformation matrix for alignment.
+- `cv2.warpPerspective()` – Warps images based on homography.
+- `cv2.drawKeypoints()` – Draws keypoints on images for visualization.
+- `cv2.drawMatches()` – Visualizes matched features between images.
+
+## Output Files
+- `KeypointsImage1.jpg`, `KeypointsImage2.jpg` – Visualized keypoints for input images.
+- `FeatureMatches1.jpg` – Matched features between images.
+- `half_stitched.jpg` – Intermediate stitched image.
+- `panorama_3.jpg` – Final panoramic output.
+
+## Conclusion
+This implementation successfully detects and matches key features between images to create a seamless panoramic view.
+
 
 ## Requirements  
 - Python 3.x  
 - OpenCV  
-- NumPy  
-- Matplotlib  
+- NumPy   
 
 Install dependencies using:  
 ```bash
-pip install opencv-python numpy matplotlib
+pip install opencv-python numpy
 ```
 
 ---
 
 ## Running the Code  
-- **Coin Detection:** Run `coin_detection.py`  
-- **Image Stitching:** Run `image_stitching.py`  
+- **Coin Detection:** Run `coin_detector.py`  
+- **Image Stitching:** Run `stitchingv2.py`  
 
 Ensure the required images are placed in the appropriate directory.
 
