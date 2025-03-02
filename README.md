@@ -133,9 +133,12 @@ This project demonstrates the use of computer vision techniques for object detec
 ---
 
 ### **Input**
-- `input_images/middle.jpg` – Middle image.
-- `input_images/left.jpg` – Left image.
-- `input_images/right.jpg` – Right image.
+![image1](part-2/input_images/middle.jpg) 
+*Middle image.*
+![image2](part-2/input_images/left.jpg) 
+*left image.*
+![image3](part-2/input_images/right.jpg) 
+*Right image.*
 
 ### **Output**
 ![Keypoints in Right Image](part-2/output_images/KeypointsImage11.jpg)
