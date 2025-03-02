@@ -12,7 +12,7 @@ gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 blurred = cv2.GaussianBlur(gray, (5, 5), 2)
 #cv2.imwrite("Gaussianblurred.jpg", blurred)
 _, binary = cv2.threshold(gray, 130, 255, cv2.THRESH_BINARY)    #making the image binary
-cv2.imwrite("output_images/binary.jpg", binary)
+#cv2.imwrite("output_images/binary.jpg", binary)
 
 #edge detection using canny edge detector
 edges = cv2.Canny(binary, 50, 150)
@@ -62,7 +62,7 @@ cv2.putText(image, f"Total Coins: {coin_count}", (50, height - 50),
             cv2.FONT_HERSHEY_SIMPLEX, 6, (0, 0, 255), 8)
 
 cv2.imwrite("output_images/detected_coins.jpg", image)
-cv2.imwrite("output_images/edges.jpg", edges)
+#cv2.imwrite("output_images/edges.jpg", edges)
 cv2.imwrite("output_images/segmented_coins.jpg", seg)
 
 
