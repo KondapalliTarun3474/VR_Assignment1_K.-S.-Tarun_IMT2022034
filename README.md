@@ -2,7 +2,6 @@
 
 ## Author: K. S. Tarun  
 **Student ID:** IMT2022034  
-**GitHub Repository:** [Insert Link Here]  
 
 ---
 
