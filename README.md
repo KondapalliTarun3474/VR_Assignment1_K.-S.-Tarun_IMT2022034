@@ -120,20 +120,20 @@ This project demonstrates the use of computer vision techniques for object detec
 ---
 
 ### **PART-1-Input**
-- `![input image](part1/input_images/IMG20250302134045_BURST002.jpg)
+- `![input image](part-1/input_images/IMG20250302134045_BURST002.jpg)
   *The image containing scattered coins.*
 
 ### **Output**
-![Detected Coins](part1/output_images/detected_coins.jpg)
+![Detected Coins](part-1/output_images/detected_coins.jpg)
 *Image with detected coin contours and count displayed.*
 
-![Binary Image](part1/output_images/binary.jpg)
+![Binary Image](part-1/output_images/binary.jpg)
 *Binary thresholded image.*
 
-![Edges](part1/output_images/edges.jpg)
+![Edges](part-1/output_images/edges.jpg)
 *Image with detected edges.*
 
-![Segmented Coins](part1/output_images/segmented_coins.jpg)
+![Segmented Coins](part-1/output_images/segmented_coins.jpg)
 *Image with segmented coins in different colors.*
 
 ---
@@ -144,26 +144,26 @@ This project demonstrates the use of computer vision techniques for object detec
 - `input_images/right.jpg` – Right image.
 
 ### **Output**
-![Keypoints in Right Image](part2/output_images/KeypointsImage11.jpg)
+![Keypoints in Right Image](part-2/output_images/KeypointsImage11.jpg)
 *Keypoints detected in right image.*
 
-![Keypoints in Middle Image](part2/output_images/KeypointsImage12.jpg)
+![Keypoints in Middle Image](part-2/output_images/KeypointsImage12.jpg)
 *Keypoints detected in middle image.*
 
-![Feature Matches 1](part2/output_images/FeatureMatches1.jpg)
+![Feature Matches 1](part-2/output_images/FeatureMatches1.jpg)
 *Matched features between right and middle images.*
 
-![Half Stitched Image](part2/output_images/half_stitched.jpg)
+![Half Stitched Image](part-2/output_images/half_stitched.jpg)
 *Intermediate stitched image.*
 
-![Keypoints in Half-Stitched Image](part2/output_images/KeypointsImage21.jpg)
+![Keypoints in Half-Stitched Image](part-2/output_images/KeypointsImage21.jpg)
 *Keypoints detected in half-stitched image.*
 
-![Keypoints in Left Image](part2/output_images/KeypointsImage22.jpg)
+![Keypoints in Left Image](part-2/output_images/KeypointsImage22.jpg)
 *Keypoints detected in left image.*
 
-![Feature Matches 2](part2/output_images/FeatureMatches2.jpg)
+![Feature Matches 2](part-2/output_images/FeatureMatches2.jpg)
 *Matched features between half-stitched and left images.*
 
-![Final Panorama](part2/output_images/panorama_3.jpg)
+![Final Panorama](part-2/output_images/panorama_3.jpg)
 *Final stitched panorama.*
